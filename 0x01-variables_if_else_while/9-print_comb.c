@@ -1,29 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description: Prints the string "piece of art,"
- *              followed by a new line.
+ * Description: Prints all possible combinations of
+ *              single-digit numbers, separated by a comma and space
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
+{int i;
+for (i = 0; i < 10; i++)
 {
-int i = 0; 
-while (i < 10)
-{
-putchar(i + '0');        
+putchar(i + '0');
 if (i != 9)
 {
 putchar(',');
 putchar(' ');
-}        
-i++;
-} 
-putchar('\n');    
+}
+}
+putchar('\n');
 return (0);
 }
-
-

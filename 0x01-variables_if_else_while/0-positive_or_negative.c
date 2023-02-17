@@ -3,29 +3,30 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description: Assigns a random number to variable n and prints whether
- * it's positive, negative or zero.
+ * Description: Assigns a random number to n and prints
+ *              whether n is positive or negative
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 int n;
-
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-
-printf("Number: %d\n", n);
-
+printf("%d is ", n);
 if (n > 0)
-printf("%d is positive\n", n);
+{
+printf("positive\n");
+}
 else if (n == 0)
-printf("%d is zero\n", n);
+{
+printf("zero\n");
+}
 else
-printf("%d is negative\n", n);
-
+{
+printf("negative\n");
+}
 return (0);
 }
-
