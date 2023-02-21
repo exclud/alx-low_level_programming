@@ -5,6 +5,7 @@
 int _putchar(char c);
 
 /* function prototype*/
-void my_function(int arg1, float arg2);
+void print_alphabet(void);
+void print_alphabet_x10(void);
 
 #endif /*MAIN_H*/
