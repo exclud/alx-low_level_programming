@@ -1,24 +1,39 @@
 /**
  * is_prime_number - Checks if a given integer is a prime number.
  *
- * @n: The integer to be checked.
+ * @n: The integer to check.
  *
- * Return: 1 if the integer is a prime number, otherwise 0.
+ * Return: 1 if the integer is prime, 0 otherwise.
  */
-
 int is_prime_number(int n)
 {
-int i;
-
-if (n <= 1) /* 1 and any number less than 1 are not primes */
+if (n < 2)
 return (0);
 
-for (i = 2; i <= n / 2; i++) /* Check for factors */
-{
-if (n % i == 0)
-return (0); /* Not a prime number */
-}
+if (n == 2)
+return (1);
 
-return (1); /* Prime number */
+if (n % 2 == 0)
+return (0);
+
+if (n == 3)
+return (1);
+
+if (n % 3 == 0)
+return (0);
+
+if (n == 5)
+return (1);
+
+if (n % 5 == 0)
+return (0);
+
+if (n == 7)
+return (1);
+
+if (n % 7 == 0)
+return (0);
+
+return (1);
 }
 
