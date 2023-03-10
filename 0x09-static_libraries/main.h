@@ -1,10 +1,7 @@
-#ifndef MAIN_H
-#define MAIN_H /
+#ifndef MY_H
+#define MY_H
 
-/*putchar function prototype*/
 int _putchar(char c);
-
-/* function prototype*/
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
@@ -25,5 +22,5 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
+#endif /* MY_H */
 
-#endif /*MAIN_H*/
