@@ -1,14 +1,22 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _strncpy - copies a string
+ * @dest: pointer to destination string
+ * @src: pointer to source string
+ * @n: maximum number of bytes to use from src
+ *
+ * Return: pointer to resulting string dest
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
-return (0);
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n; i++)
+		dest[i] = '\0';
+
+	return (dest);
 }
+

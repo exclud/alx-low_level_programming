@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: character to be checked
+ * Return: 1 if c is a digit, 0 otherwise
  */
-
 int _isdigit(int c)
 {
-return (0);
+	return (c >= '0' && c <= '9');
 }
+

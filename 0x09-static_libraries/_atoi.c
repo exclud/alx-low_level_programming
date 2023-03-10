@@ -1,14 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: integer value of s
  */
-
 int _atoi(char *s)
 {
-return (0);
+	int sign = 1, num = 0;
+
+	if (*s == '-')
+		sign = -1, s++;
+
+	while (*s && _isdigit(*s))
+		num = num * 10 + (*s++ - '0');
+
+	return (sign * num);
 }
+

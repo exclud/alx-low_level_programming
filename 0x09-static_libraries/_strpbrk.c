@@ -1,14 +1,29 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _strpbrk - Searches a string for any of a set of bytes
+ * @s: Pointer to the string to be searched
+ * @accept: Pointer to the string containing the characters to match
+ *
+ * Return: Pointer to the byte in s that matches one of the bytes in accept,
+ *         or NULL if no such byte is found
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-return (0);
+    while (*s != '\0')
+    {
+        char *a = accept;
+
+        while (*a != '\0')
+        {
+            if (*s == *a)
+                return (s);
+            a++;
+        }
+
+        s++;
+    }
+
+    return (0);
 }
+

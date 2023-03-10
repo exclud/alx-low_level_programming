@@ -1,14 +1,28 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _strcat - concatenates two strings
+ * @dest: pointer to destination string
+ * @src: pointer to source string
+ *
+ * Return: pointer to resulting string dest
  */
-
 char *_strcat(char *dest, char *src)
 {
-return (0);
+	int i, j;
+
+	i = j = 0;
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
+

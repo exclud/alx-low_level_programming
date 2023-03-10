@@ -1,14 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _memset - fills memory with a constant byte
+ * @s: pointer to memory area to fill
+ * @b: value to set memory to
+ * @n: number of bytes to fill
+ *
+ * Return: pointer to memory area s
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-return (0);
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = b;
+
+	return (s);
 }
+

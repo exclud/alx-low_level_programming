@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _abs - computes the absolute value of an integer
+ * @n: integer to be processed
+ * Return: absolute value of n
  */
-
-int _abs(int n){
-return (0);
+int _abs(int n)
+{
+	return (n < 0 ? -n : n);
 }
+

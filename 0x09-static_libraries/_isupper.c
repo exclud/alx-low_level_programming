@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _isupper - checks for uppercase character
+ * @c: character to be checked
+ * Return: 1 if c is uppercase, 0 otherwise
  */
-
 int _isupper(int c)
 {
-return (0);
+	return (c >= 'A' && c <= 'Z');
 }
+

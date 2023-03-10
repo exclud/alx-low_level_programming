@@ -1,14 +1,17 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _strlen - computes the length of a string
+ * @s: string to be processed
+ * Return: length of the string
  */
-
 int _strlen(char *s)
 {
-return (0);
+	int len = 0;
+
+	while (*s++)
+		len++;
+
+	return (len);
 }
+

@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: Prints the number of arguments passed into the program
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- * Return: 0 (Success)
+ * _puts - prints a string to stdout
+ * @s: string to be printed
  */
-
 void _puts(char *s)
 {
-
+	while (*s)
+		_putchar(*s++);
 }
+
