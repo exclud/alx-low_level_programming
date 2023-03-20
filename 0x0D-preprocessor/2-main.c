@@ -1,13 +1,13 @@
-#include <iostream>
+#include <stdio.h>
 
 /**
- * main - Prints the name of the current source file
+ * main - Entry point
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-std::cout << __FILE__ << std::endl;
+printf("Compiled from file: %s\n", __FILE__);
 return (0);
 }
 
