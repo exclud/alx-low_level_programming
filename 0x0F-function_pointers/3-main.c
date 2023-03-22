@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - Entry point
+ * @argc: The number of arguments passed to the program
+ * @argv: An array of pointers to the arguments
+ *
+ * Return: 0 if successful, otherwise an error code
+ */
 int main(int argc, char *argv[])
 {
 int a, b, result;

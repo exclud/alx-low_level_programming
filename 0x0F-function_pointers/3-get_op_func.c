@@ -5,9 +5,8 @@
  * get_op_func - selects the correct function to perform the operation
  * @s: operator passed as argument to the program
  *
- * Return: pointer to the function that corresponds to the operator given as a parameter
- *         If s does not match any of the 5 expected operators (+, -, *, /, %), returns 0
- */
+ * Return: pointer to the function that corresponds to the operaton
+*/
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
@@ -30,4 +29,5 @@ i++;
 }
 return (0);
 }
+
 
