@@ -1,10 +1,10 @@
 /**
  * print_name - prints a name
  * @name: a pointer to the name string
- * @f: a function pointer to a function that takes a char pointer argument and returns void
+ * @f: a function pointer to a function
  *
- * Description: This function takes a name string and a function pointer, and calls the function
- * pointed to by f, passing the name string as an argument. The function pointed to by f should
+ * Description: This function takes a name string 
+ * pointed to by f, passing the name string as an argument. 
  * print the name in the desired format.
  */
 void print_name(char *name, void (*f)(char *))
