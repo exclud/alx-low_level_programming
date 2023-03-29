@@ -1,6 +1,6 @@
 
 # C Programming
 
-This Repository includes concepts in C Programming.
+This Repository includes major concepts in C Programming.
  
 
