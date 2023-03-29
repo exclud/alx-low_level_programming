@@ -1,1 +1,6 @@
-This Repository is basically all about low level programming in C. 
+
+# C Programming
+
+This Repository includes concepts in C Programming.
+
+
