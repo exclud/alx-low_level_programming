@@ -4,24 +4,24 @@
  * @head: pointer to the head of the list
  * @str: string to be added as the new node's str element
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: the address of the new element, or 0 if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *new_node;
 
-if (head == NULL || str == NULL)
-return (NULL);
+if (head == 0 || str == 0)
+return (0);
 
 new_node = malloc(sizeof(list_t));
-if (new_node == NULL)
-return (NULL);
+if (new_node == 0)
+return (0);
 
 new_node->str = strdup(str);
-if (new_node->str == NULL)
+if (new_node->str == 0)
 {
 free(new_node);
-return (NULL);
+return (0);
 }
 
 new_node->len = strlen(str);
