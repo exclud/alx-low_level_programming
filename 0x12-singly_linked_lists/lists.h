@@ -1,7 +1,7 @@
 #ifndef MY_H
 #define MY_H
 
-// Data Structure Used.
+
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
