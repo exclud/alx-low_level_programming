@@ -1,9 +1,11 @@
 #ifndef MY_H
 #define MY_H
 
+/*Necessary Header Files*/
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -19,7 +21,6 @@ typedef struct dlistint_s
     struct dlistint_s *prev;
     struct dlistint_s *next;
 } dlistint_t;
-
 
 
 /* Function Prototypes*/
