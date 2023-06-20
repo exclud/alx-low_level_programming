@@ -1,1 +1,1 @@
-0x18.C - Dynamic Libraries
+0x18.C - Dynamic Libraries in C.
