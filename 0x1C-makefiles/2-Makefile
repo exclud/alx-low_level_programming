@@ -1,0 +1,28 @@
+# Makefile for building the 'school' executable
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files (automatically generated from SRC)
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Rule to build the executable
+all: $(NAME)
+
+# Rule to build the executable from object files
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile individual source files to object files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Rule to clean generated files
+clean:
+	rm -f $(NAME) $(OBJ)
