@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files (automatically generated from SRC)
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Rule to build the executable
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
+
+.PHONY: all
+
+# Rule to clean Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ \#*\# $(NAME)
+
+.PHONY: clean
+
+# Rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+.PHONY: oclean
+
+# Rule to delete all Emacs and Vim temporary files, executable, and object files
+fclean: clean oclean
+
+.PHONY: fclean
+
+# Rule to force recompilation of all source files
+re: fclean all
+
+.PHONY: re
+
+# Include header file dependency
+-include m.h
