@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Definition of island_perimeter"""
+
 
 def island_perimeter(grid):
     """
