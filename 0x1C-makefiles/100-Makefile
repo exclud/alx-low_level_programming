@@ -1,5 +1,3 @@
-#!/usr/bin/make -f
-
 # Compiler
 CC = gcc
 
@@ -15,35 +13,23 @@ NAME = school
 # Compiler flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Rule to build the executable
-all: $(NAME)
+# Define phony targets that don't correspond to actual files
+.PHONY: all clean oclean fclean re
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
+# Default rule: build the executable
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-.PHONY: all
-
-# Rule to clean Emacs and Vim temporary files along with the executable
+# Rule to clean up temporary files and the executable
 clean:
-	$(RM) *~ \#*\# $(NAME)
-
-.PHONY: clean
+	$(RM) *~ $(NAME)
 
 # Rule to delete object files
 oclean:
 	$(RM) $(OBJ)
 
-.PHONY: oclean
-
-# Rule to delete all Emacs and Vim temporary files, executable, and object files
+# Rule to delete all temporary files, executable, and object files
 fclean: clean oclean
 
-.PHONY: fclean
-
-# Rule to force recompilation of all source files
-re: fclean all
-
-.PHONY: re
-
-# Include header file dependency
--include m.h
+# Rule to force recompilation by cleaning object files and rebuilding
+re: oclean all
